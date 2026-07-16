@@ -19,6 +19,7 @@
   --line-gam: #4E8FE0; /* gaming — blu */
   --line-msc: #D97AA8; /* varie — rosa */
   --line-bk:  #BDB76B; /* book — kaki */
+  --line-sup: #4FD8E5; /* support — ciano */
 
   --font-display: 'Archivo', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -196,6 +197,7 @@ a { color: inherit; text-decoration: none; }
 .tile[data-line="gam"] .tile-bar { background: var(--line-gam); }
 .tile[data-line="msc"] .tile-bar { background: var(--line-msc); }
 .tile[data-line="bk"]  .tile-bar { background: var(--line-bk);  }
+.tile[data-line="sup"] .tile-bar { background: var(--line-sup); }
 
 .tile-top {
   display: flex;
@@ -219,6 +221,7 @@ a { color: inherit; text-decoration: none; }
 .tile[data-line="gam"] .tile-code { color: var(--line-gam); }
 .tile[data-line="msc"] .tile-code { color: var(--line-msc); }
 .tile[data-line="bk"]  .tile-code { color: var(--line-bk);  }
+.tile[data-line="sup"] .tile-code { color: var(--line-sup); }
 
 .tile-arrow {
   font-family: var(--font-mono);
@@ -369,6 +372,7 @@ a { color: inherit; text-decoration: none; }
 .line-switch-dot[data-line="gam"] { background: var(--line-gam); }
 .line-switch-dot[data-line="msc"] { background: var(--line-msc); }
 .line-switch-dot[data-line="bk"]  { background: var(--line-bk);  }
+.line-switch-dot[data-line="sup"] { background: var(--line-sup); }
 
 .detail-panel {
   max-width: 640px;
@@ -396,6 +400,7 @@ a { color: inherit; text-decoration: none; }
 .detail-panel[data-line="gam"] .panel-code { color: var(--line-gam); }
 .detail-panel[data-line="msc"] .panel-code { color: var(--line-msc); }
 .detail-panel[data-line="bk"]  .panel-code { color: var(--line-bk);  }
+.detail-panel[data-line="sup"] .panel-code { color: var(--line-sup); }
 
 .panel-heading {
   font-family: var(--font-display);
@@ -444,6 +449,7 @@ a { color: inherit; text-decoration: none; }
 .detail-panel[data-line="gam"] .stop a:hover { color: var(--line-gam); }
 .detail-panel[data-line="msc"] .stop a:hover { color: var(--line-msc); }
 .detail-panel[data-line="bk"]  .stop a:hover { color: var(--line-bk);  }
+.detail-panel[data-line="sup"] .stop a:hover { color: var(--line-sup); }
 
 .stop a:hover .stop-arrow,
 .stop a:focus-visible .stop-arrow {
