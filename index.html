@@ -26,9 +26,19 @@
 <main id="top">
 
   <!-- ================= VISTA: GRIGLIA LINEE ================= -->
-  <section class="tiles-view wrap" id="tilesView" aria-label="Linee disponibili">
+  <section class="tiles-view wrap" id="tilesView" aria-label="Categorie disponibili">
     <p class="section-label">Choose a category</p>
     <div class="tiles-grid">
+
+      <a class="tile" href="#bot" data-line="bot">
+        <span class="tile-bar" aria-hidden="true"></span>
+        <span class="tile-top">
+          <span class="tile-code">BOT</span>
+          <span class="tile-arrow" aria-hidden="true">→</span>
+        </span>
+        <span class="tile-title">Chatbot</span>
+        <span class="tile-count" data-count-for="bot"></span>
+      </a>
 
       <a class="tile" href="#str" data-line="str">
         <span class="tile-bar" aria-hidden="true"></span>
@@ -38,6 +48,26 @@
         </span>
         <span class="tile-title">Streaming</span>
         <span class="tile-count" data-count-for="str"></span>
+      </a>
+
+      <a class="tile" href="#tv" data-line="tv">
+        <span class="tile-bar" aria-hidden="true"></span>
+        <span class="tile-top">
+          <span class="tile-code">TV</span>
+          <span class="tile-arrow" aria-hidden="true">→</span>
+        </span>
+        <span class="tile-title">Sport &amp; TV</span>
+        <span class="tile-count" data-count-for="tv"></span>
+      </a>
+
+      <a class="tile" href="#gam" data-line="gam">
+        <span class="tile-bar" aria-hidden="true"></span>
+        <span class="tile-top">
+          <span class="tile-code">GAM</span>
+          <span class="tile-arrow" aria-hidden="true">→</span>
+        </span>
+        <span class="tile-title">Gaming</span>
+        <span class="tile-count" data-count-for="gam"></span>
       </a>
 
       <a class="tile" href="#ani" data-line="ani">
@@ -60,14 +90,14 @@
         <span class="tile-count" data-count-for="mng"></span>
       </a>
 
-      <a class="tile" href="#bot" data-line="bot">
+      <a class="tile" href="#bk" data-line="bk">
         <span class="tile-bar" aria-hidden="true"></span>
         <span class="tile-top">
-          <span class="tile-code">BOT</span>
+          <span class="tile-code">BK</span>
           <span class="tile-arrow" aria-hidden="true">→</span>
         </span>
-        <span class="tile-title">Chatbot</span>
-        <span class="tile-count" data-count-for="bot"></span>
+        <span class="tile-title">Book</span>
+        <span class="tile-count" data-count-for="bk"></span>
       </a>
 
       <a class="tile" href="#fsh" data-line="fsh">
@@ -80,16 +110,6 @@
         <span class="tile-count" data-count-for="fsh"></span>
       </a>
 
-      <a class="tile" href="#gam" data-line="gam">
-        <span class="tile-bar" aria-hidden="true"></span>
-        <span class="tile-top">
-          <span class="tile-code">GAM</span>
-          <span class="tile-arrow" aria-hidden="true">→</span>
-        </span>
-        <span class="tile-title">Gaming</span>
-        <span class="tile-count" data-count-for="gam"></span>
-      </a>
-
       <a class="tile" href="#msc" data-line="msc">
         <span class="tile-bar" aria-hidden="true"></span>
         <span class="tile-top">
@@ -98,16 +118,6 @@
         </span>
         <span class="tile-title">Miscellaneous</span>
         <span class="tile-count" data-count-for="msc"></span>
-      </a>
-
-      <a class="tile" href="#bk" data-line="bk">
-        <span class="tile-bar" aria-hidden="true"></span>
-        <span class="tile-top">
-          <span class="tile-code">BK</span>
-          <span class="tile-arrow" aria-hidden="true">→</span>
-        </span>
-        <span class="tile-title">Book</span>
-        <span class="tile-count" data-count-for="bk"></span>
       </a>
 
       <a class="tile" href="#sup" data-line="sup">
@@ -130,21 +140,41 @@
 
       <div class="line-switch" id="lineSwitch">
         <button class="line-switch-btn" id="lineSwitchBtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lineSwitchMenu">
-          Switch line
+          Switch category
           <span class="line-switch-caret" aria-hidden="true">▾</span>
         </button>
         <ul class="line-switch-menu is-hidden" id="lineSwitchMenu" role="menu">
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="bot" href="#bot"><span class="line-switch-dot" data-line="bot" aria-hidden="true"></span>BOT — Chatbot</a></li>
           <li role="none"><a role="menuitem" class="line-switch-item" data-line="str" href="#str"><span class="line-switch-dot" data-line="str" aria-hidden="true"></span>STR — Streaming</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="tv" href="#tv"><span class="line-switch-dot" data-line="tv" aria-hidden="true"></span>TV — Sport &amp; TV</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="gam" href="#gam"><span class="line-switch-dot" data-line="gam" aria-hidden="true"></span>GAM — Gaming</a></li>
           <li role="none"><a role="menuitem" class="line-switch-item" data-line="ani" href="#ani"><span class="line-switch-dot" data-line="ani" aria-hidden="true"></span>ANI — Anime</a></li>
           <li role="none"><a role="menuitem" class="line-switch-item" data-line="mng" href="#mng"><span class="line-switch-dot" data-line="mng" aria-hidden="true"></span>MNG — Manga</a></li>
-          <li role="none"><a role="menuitem" class="line-switch-item" data-line="bot" href="#bot"><span class="line-switch-dot" data-line="bot" aria-hidden="true"></span>BOT — Chatbot</a></li>
-          <li role="none"><a role="menuitem" class="line-switch-item" data-line="fsh" href="#fsh"><span class="line-switch-dot" data-line="fsh" aria-hidden="true"></span>FSH — File-sharing</a></li>
-          <li role="none"><a role="menuitem" class="line-switch-item" data-line="gam" href="#gam"><span class="line-switch-dot" data-line="gam" aria-hidden="true"></span>GAM — Gaming</a></li>
-          <li role="none"><a role="menuitem" class="line-switch-item" data-line="msc" href="#msc"><span class="line-switch-dot" data-line="msc" aria-hidden="true"></span>MSC — Miscellaneous</a></li>
           <li role="none"><a role="menuitem" class="line-switch-item" data-line="bk" href="#bk"><span class="line-switch-dot" data-line="bk" aria-hidden="true"></span>BK — Book</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="fsh" href="#fsh"><span class="line-switch-dot" data-line="fsh" aria-hidden="true"></span>FSH — File-sharing</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="msc" href="#msc"><span class="line-switch-dot" data-line="msc" aria-hidden="true"></span>MSC — Miscellaneous</a></li>
           <li role="none"><a role="menuitem" class="line-switch-item" data-line="sup" href="#sup"><span class="line-switch-dot" data-line="sup" aria-hidden="true"></span>SUP — Support</a></li>
         </ul>
       </div>
+    </div>
+
+
+    <!-- INIZIO CHATBOT -->
+    <div class="detail-panel" data-line="bot">
+      <div class="panel-head">
+        <span class="panel-code">BOT</span>
+        <h2 class="panel-heading" tabindex="-1">Chatbot</h2>
+      </div>
+      <ul class="stop-list">
+        <li class="stop"><a href="https://claude.ai/new" target="_blank" rel="noopener">Claude<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://chat.qwen.ai/" target="_blank" rel="noopener">Qwen<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://chat.deepseek.com/" target="_blank" rel="noopener">DeepSeek<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://aistudio.google.com/prompts/new_chat" target="_blank" rel="noopener">Google AI Studio<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://copilot.microsoft.com/" target="_blank" rel="noopener">Copilot<span class="stop-arrow">→</span></a></li>
+      </ul>
     </div>
 
 
@@ -264,6 +294,47 @@
             <span class="stop-arrow">→</span>
           </a>
         </li>
+      </ul>
+    </div>
+
+
+    <!-- INIZIO SPORT & TV -->
+    <div class="detail-panel" data-line="tv">
+      <div class="panel-head">
+        <span class="panel-code">TV</span>
+        <h2 class="panel-heading" tabindex="-1">Sport &amp; TV</h2>
+      </div>
+       <p class="footer-note">This collection of links was created to show whitch sites you should ABSOLUTELY NOT visit. Use only streaming sites that respect copyright.</p>
+      <ul class="stop-list">
+	<li class="stop"><a href="https://tvgarden.world/" target="_blank" rel="noopener">TV Garden (Watch TV worldwide)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://v5.gostreameast.link/" target="_blank" rel="noopener">Streameast<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://ondemand.st/" target="_blank" rel="noopener">Ondemand<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://www.cineby.at/livestream" target="_blank" rel="noopener">Cineby sport<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://daddylive.pk/" target="_blank" rel="noopener">DaddyLive (The name is...oh well)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://www.bestfreestreaming.org/sites/sports.html" target="_blank" rel="noopener">BestFreeStreaming (Link Collection)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://tbcpl.lol/#cat-livetv" target="_blank" rel="noopener">TBCPL live (Link Collection)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://fmhy.net/video#live-tv-sports" target="_blank" rel="noopener">FMHY live (Link Collection)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://yarrlist.net/sports-live-streaming" target="_blank" rel="noopener">YarrList Sport Live (Link Collection)<span class="stop-arrow">→</span></a></li>
+
+      </ul>
+    </div>
+
+
+    <!-- INIZIO GAMING -->
+    <div class="detail-panel" data-line="gam">
+      <div class="panel-head">
+        <span class="panel-code">GAM</span>
+        <h2 class="panel-heading" tabindex="-1">Gaming</h2>
+      </div>
+       <p class="footer-note">This collection of links was created to show whitch sites you should ABSOLUTELY NOT visit. Use only sites that respect copyright.</p>
+      <ul class="stop-list">
+        <li class="stop"><a href="https://ankergames.net/" target="_blank" rel="noopener">AnkerGames (PC gaming)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://steamrip.com/top-games/" target="_blank" rel="noopener">SteamRip (PC gaming)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://fitgirl-repacks.site/" target="_blank" rel="noopener">FitGirl Repack (PC gaming)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://romslab.com/category/switch-games/" target="_blank" rel="noopener">RomsLab (Nintendo Switch NSP)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://hexrom.com/" target="_blank" rel="noopener">HexRom (Retro games ROM)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://rec0ded88.com/" target="_blank" rel="noopener">Recoded:88 (Retro gaming online)<span class="stop-arrow">→</span></a></li>
+	<li class="stop"><a href="https://it.boardgamearena.com/" target="_blank" rel="noopener">BoardgameArena (Play boardgames online)<span class="stop-arrow">→</span></a></li>
       </ul>
     </div>
 
@@ -400,21 +471,16 @@
     </div>
 
 
-    <!-- INIZIO CHATBOT -->
-    <div class="detail-panel" data-line="bot">
+    <!-- INIZIO BOOK -->
+    <div class="detail-panel" data-line="bk">
       <div class="panel-head">
-        <span class="panel-code">BOT</span>
-        <h2 class="panel-heading" tabindex="-1">Chatbot</h2>
+        <span class="panel-code">BK</span>
+        <h2 class="panel-heading" tabindex="-1">Book</h2>
       </div>
+       <p class="footer-note">This collection of links was created to show whitch sites you should ABSOLUTELY NOT visit. Use only sites that respect copyright.</p>
       <ul class="stop-list">
-        <li class="stop"><a href="https://claude.ai/new" target="_blank" rel="noopener">Claude<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://chat.qwen.ai/" target="_blank" rel="noopener">Qwen<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://chat.deepseek.com/" target="_blank" rel="noopener">DeepSeek<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://aistudio.google.com/prompts/new_chat" target="_blank" rel="noopener">Google AI Studio<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://copilot.microsoft.com/" target="_blank" rel="noopener">Copilot<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://openlibrary.org/" target="_blank" rel="noopener">OpenLibrary<span class="stop-arrow">→</span></a></li>
+	<li class="stop"><a href="https://z-library.sk/" target="_blank" rel="noopener">ZLibrary<span class="stop-arrow">→</span></a></li>
       </ul>
     </div>
 
@@ -426,25 +492,10 @@
         <h2 class="panel-heading" tabindex="-1">File-sharing</h2>
       </div>
       <ul class="stop-list">
-        <li class="stop"><a href="https://pairdrop.net/" target="_blank" rel="noopener">PairDrop<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://www.filemail.com/it" target="_blank" rel="noopener">FileMail<span class="stop-arrow">→</span></a></li>
-      </ul>
-    </div>
-
-
-     <!-- INIZIO GAMING -->
-    <div class="detail-panel" data-line="gam">
-      <div class="panel-head">
-        <span class="panel-code">GAM</span>
-        <h2 class="panel-heading" tabindex="-1">Gaming</h2>
-      </div>
-       <p class="footer-note">This collection of links was created to show whitch sites you should ABSOLUTELY NOT visit. Use only sites that respect copyright.</p>
-      <ul class="stop-list">
-        <li class="stop"><a href="https://ankergames.net/" target="_blank" rel="noopener">AnkerGames<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://steamrip.com/top-games/" target="_blank" rel="noopener">SteamRip<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://romslab.com/category/switch-games/" target="_blank" rel="noopener">RomsLab (Nintendo Switch)<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://rec0ded88.com/" target="_blank" rel="noopener">Recoded:88 (Retro Gaming)<span class="stop-arrow">→</span></a></li>
-        <li class="stop"><a href="https://fitgirl-repacks.site/" target="_blank" rel="noopener">FitGirl Repack<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://pairdrop.net/" target="_blank" rel="noopener">PairDrop (Connect 2 nearby devices)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://drop.lol/NFFVJ" target="_blank" rel="noopener">DropLol (Connect 2 devices via QR code)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://www.filemail.com/it" target="_blank" rel="noopener">FileMail (Send large mail)<span class="stop-arrow">→</span></a></li>
+        <li class="stop"><a href="https://giraffile.pages.dev/" target="_blank" rel="noopener">Giraffile (Cute name)<span class="stop-arrow">→</span></a></li>
       </ul>
     </div>
 
@@ -467,20 +518,6 @@
     </div>
 
 
- <!-- INIZIO BOOK -->
-    <div class="detail-panel" data-line="bk">
-      <div class="panel-head">
-        <span class="panel-code">BK</span>
-        <h2 class="panel-heading" tabindex="-1">Book</h2>
-      </div>
-       <p class="footer-note">This collection of links was created to show whitch sites you should ABSOLUTELY NOT visit. Use only sites that respect copyright.</p>
-      <ul class="stop-list">
-        <li class="stop"><a href="https://openlibrary.org/" target="_blank" rel="noopener">OpenLibrary<span class="stop-arrow">→</span></a></li>
-	<li class="stop"><a href="https://z-library.sk/" target="_blank" rel="noopener">ZLibrary<span class="stop-arrow">→</span></a></li>
-      </ul>
-    </div>
-
-
     <!-- INIZIO SUPPORT -->
     <div class="detail-panel" data-line="sup">
       <div class="panel-head">
@@ -493,6 +530,8 @@
         <li class="stop"><a href="https://t.me/Redirectpediasup_bot" target="_blank" rel="noopener">Contact us on Telegram<span class="stop-arrow">→</span></a></li>
       </ul>
     </div>
+
+
 
     <noscript>
       <p class="noscript-note">La navigazione a schede richiede JavaScript. Con JavaScript disattivato, questa pagina mostra comunque tutti i link di ogni linea qui sopra.</p>
