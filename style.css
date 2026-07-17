@@ -5,7 +5,6 @@
   --paper-dim:  #B9BAC9;
   --hairline:   #2C3252;
 
-  /* linee (una per categoria) */
   --line-str: #F2A63D; /* streaming — ambra */
   --line-ani: #E15A4D; /* anime — corallo */
   --line-mng: #8B7FD6; /* manga — viola */
@@ -281,7 +280,7 @@ a { color: inherit; text-decoration: none; }
   border-color: var(--paper-dim);
 }
 
-/* ---- menu a comparsa: passa da una linea all'altra ---- */
+/* ---- menu a comparsa: passa da una categoria all'altra ---- */
 
 .line-switch {
   position: relative;
@@ -550,6 +549,13 @@ a { color: inherit; text-decoration: none; }
      così la linea del footer non "tocca" la tessera Book */
   .tiles-view { padding-bottom: 48px; }
   .site-footer { margin-top: 24px; }
+
+  /* più respiro tra la testata e il pulsante "Back to homepage"
+     nella vista di dettaglio e in quella "non trovata" */
+  .detail-view,
+  .notfound-view {
+    padding-top: 72px;
+  }
 
   /* menu "switch line": a tutta larghezza sotto il pulsante */
   .line-switch { width: 100%; }
